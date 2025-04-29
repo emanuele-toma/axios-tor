@@ -26,7 +26,6 @@
   "homepage": "https://github.com/emanuele-toma/axios-tor#readme",
   "description": "A simple wrapper around axios to use it with Tor",
   "devDependencies": {
-    "@rollup/plugin-typescript": "^12.1.2",
     "@types/node": "^22.15.3",
     "typescript": "^5.8.3"
   },
