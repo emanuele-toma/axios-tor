@@ -1,0 +1,37 @@
+{
+  "name": "axios-tor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "index.js",
+  "type": "module",
+  "exports": {
+    "import": "./index.js"
+  },
+  "scripts": {
+    "scripts:copy": "node scripts/copy.js",
+    "build": "tsc && npm run scripts:copy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emanuele-toma/axios-tor.git"
+  },
+  "keywords": [
+    "tor"
+  ],
+  "author": "emanuele-toma",
+  "license": "GNU AGPLv3",
+  "bugs": {
+    "url": "https://github.com/emanuele-toma/axios-tor/issues"
+  },
+  "homepage": "https://github.com/emanuele-toma/axios-tor#readme",
+  "description": "A simple wrapper around axios to use it with Tor",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "socks-proxy-agent": "^8.0.5"
+  }
+}
