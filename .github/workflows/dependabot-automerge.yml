@@ -4,7 +4,6 @@ on: pull_request
 permissions:
   contents: write
   pull-requests: write
-  actions: write
 
 jobs:
   dependabot:
@@ -17,16 +16,3 @@ jobs:
           PR_URL: ${{ github.event.pull_request.html_url }}
           PR_TITLE: ${{ github.event.pull_request.title }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Trigger Publish Package to npmjs
-        if: success()
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const response = await github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: "publish-to-npm.yml",
-              ref: "main"
-            });
-            core.info(`Triggered Publish Package to npmjs workflow: ${response.status}`);
